@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_application_1/widget/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -23,9 +24,8 @@ class home extends StatelessWidget {
       //   drawer: Drawer(),
       // ),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+      theme: mytheme.lighttheme(context)
+      ,darkTheme: mytheme.darktheme(context),
       initialRoute: myroutes.homeroute,
       debugShowCheckedModeBanner: false,
       routes: {
