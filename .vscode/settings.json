@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "D:/flutter/flutter_application_1/windows/runner"
+    "cmake.sourceDirectory": "D:/flutter/flutter_application_1/windows/runner",
+    "editor.guides.indentation": false
 }

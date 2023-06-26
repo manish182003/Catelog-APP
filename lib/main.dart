@@ -8,7 +8,7 @@ void main() {
   runApp(home());
 }
 
-//stl 
+//stl
 class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class home extends StatelessWidget {
           primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.lato().fontFamily),
       initialRoute: myroutes.homeroute,
+      debugShowCheckedModeBanner: false,
       routes: {
         //  "/home": (context) => home(),
         myroutes.loginroute: (context) => loginPage(),
