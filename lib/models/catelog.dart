@@ -4,7 +4,7 @@ class Catelogmodel {
 
 class Item {
   final int id;
-  final String name;
+  final  String name;
   final String desc;
   final num price;
   final String color;

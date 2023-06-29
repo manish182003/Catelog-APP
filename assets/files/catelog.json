@@ -1,54 +1,44 @@
 {
-"products":[
-{
-    "id": 1,
-    "color": "#33505a",
-    "desc": "Apple iphone 12th generation",
-    "image":
-        "https://katensa.com/store/wp-content/uploads/2021/10/iPhone-13-128-GB-katensa-celulares-credito-oferta-la-mejor-tienda-en-linea-barranquilla-colombia-azul.jpg",
-    "name": "IPHONE12 PRO",
-    "price": 999
-},{
-    "id": 2,
-    "color": "#33505a",
-    "desc": "Apple iphone 14 mobile",
-    "image":
-        "https://www.91-img.com/pictures/143993-v4-apple-iphone-14-mobile-phone-large-1.jpg",
-    "name":"IPHONE 14 MOBILE"        
-    ,"price": 555
-},{
-    "id": 3,
-    "color": "#33505a",
-    "desc": "NOTHING PHONE 1",
-    "image":
-        "https://images.hindustantimes.com/tech/img/2022/07/31/1600x900/IMG_4297_1659242329944_1659242374626_1659242374626.jpg",
-    "name": "NOTHING PHONE",
-    "price": 99
-},{
-    "id": 4,
-    "color": "#33505a",
-    "desc": "SAMSUNNG PHONE IS BEST CHOICE",
-    "image":
-        "https://www.zdnet.com/a/img/resize/f792d73c3e241b8f40a52875616f490ea1a08e97/2023/04/24/4e586f53-afa2-452d-baf4-cc7c78c2c5fb/samsung-galaxy-a54-5g.jpg?auto=webp&fit=crop&height=1200&width=1200",
-    "name": "SAMSUNG PHONE",
-    "price": 666
-},{
-    "id": 5,
-    "color": "#33505a",
-    "desc": "FOLDABLE PHONE IS ONE OF THE BEST CHOICE",
-    "image":
-        "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2019/02/foldables.webp?ssl=1&quality=80&w=f",
-    "name": "FOLDABLE PHONE",
-    "price": 333
+    "products": [
+        {
+            "id": 1,
+            "color": "#33505a",
+            "desc": "Apple iphone 12th generation",
+            "image": "https://katensa.com/store/wp-content/uploads/2021/10/iPhone-13-128-GB-katensa-celulares-credito-oferta-la-mejor-tienda-en-linea-barranquilla-colombia-azul.jpg",
+            "name": "IPHONE12 PRO",
+            "price": 999
+        },
+        {
+            "id": 2,
+            "color": "#33505a",
+            "desc": "Apple iphone 14 mobile",
+            "image": "https://www.91-img.com/pictures/143993-v4-apple-iphone-14-mobile-phone-large-1.jpg",
+            "name": "IPHONE 14 MOBILE",
+            "price": 555
+        },
+        {
+            "id": 3,
+            "color": "#33505a",
+            "desc": "NOTHING PHONE 1",
+            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MME73?wid=890&hei=890&fmt=jpeg&qlt=90&.v=1632861342000",
+            "name": "NOTHING PHONE",
+            "price": 99
+        },
+        {
+            "id": 4,
+            "color": "#33505a",
+            "desc": "SAMSUNNG PHONE IS BEST CHOICE",
+            "image": "https://cdn.screenguards.co.in/media/catalog/product/cache/11/image/9df78eab33525d08d6e5fb8d27136e95/2/0/2010041734423.jpg",
+            "name": "SAMSUNG PHONE",
+            "price": 666
+        },
+        {
+            "id": 5,
+            "color": "#33505a",
+            "desc": "FOLDABLE PHONE IS ONE OF THE BEST CHOICE",
+            "image": "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2019/02/foldables.webp?ssl=1&quality=80&w=f",
+            "name": "FOLDABLE PHONE",
+            "price": 333
+        }
+    ]
 }
-]
-}
-
-
-
-
-
-
-
-
-
