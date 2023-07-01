@@ -12,10 +12,12 @@ class homedetailpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: mytheme.creamcolor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -24,10 +26,10 @@ class homedetailpage extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(mytheme.darkbluishcolor),
+                            MaterialStateProperty.all(context.theme.focusColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "BUY".text.make())
-                .wh(100, 50)
+                    child: "Add to cart".text.make())
+                .wh(120, 50)
           ],
         ),
       ),
@@ -45,20 +47,27 @@ class homedetailpage extends StatelessWidget {
                 arcType: VxArcType.convey,
                 edge: VxEdge.top,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
                       catelog.name.text.xl4
-                          .color(mytheme.darkbluishcolor)
+                          .color(context.theme.hintColor)
                           .bold
                           .make(),
                       catelog.desc.text
                           .textStyle(context.captionStyle)
                           .xl
                           .make(),
+                      10.heightBox,
+                      "Enim ea Lorem nostrud cillum velit enim ut ea cillum qui. Culpa officia adipisicing dolor fugiat nulla Lorem incididunt fugiat consequat consequat. Aute deserunt dolore esse commodo enim. Voluptate nostrud anim ex cupidatat ipsum qui ipsum reprehenderit consectetur labore. Dolore in dolore culpa fugiat"
+                          .text
+                          .textStyle(context.captionStyle)
+                          .bold
+                          .make()
+                          .p16()
                     ],
-                  ).p64(),
+                  ).py64(),
                 ),
               ),
             )

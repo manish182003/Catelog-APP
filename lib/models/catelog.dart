@@ -1,10 +1,18 @@
+import 'package:flutter/cupertino.dart';
+
 class Catelogmodel {
   static List<Item> items = [];
+
+  Item getbyid(int id) =>
+      items.firstWhere((Element) => Element.id == id, orElse: null);
+
+      
+ Item getbyposition(int pos) => items[pos];
 }
 
 class Item {
   final int id;
-  final  String name;
+  final String name;
   final String desc;
   final num price;
   final String color;

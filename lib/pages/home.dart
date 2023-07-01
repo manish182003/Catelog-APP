@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:ui';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widget/theme.dart';
@@ -35,7 +37,17 @@ class _homepageState extends State<homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: mytheme.creamcolor,
+        backgroundColor: context.canvasColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, myroutes.cartroute);
+          },
+          backgroundColor: context.theme.focusColor,
+          child: Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          ),
+        ),
         body: SafeArea(
             child: Container(
           padding: Vx.m32,
@@ -59,7 +71,7 @@ class CatelogHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      "Catelog App".text.xl5.bold.color(mytheme.darkbluishcolor).make(),
+      "Catelog App".text.xl5.bold.color(context.theme.hintColor).make(),
       "Trending Products".text.xl2.make()
     ]);
   }
@@ -106,7 +118,7 @@ class Catelogitem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            catelog.name.text.lg.color(mytheme.darkbluishcolor).bold.make(),
+            catelog.name.text.lg.color(context.theme.hintColor).bold.make(),
             catelog.desc.text.textStyle(context.captionStyle).make(),
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -117,15 +129,15 @@ class Catelogitem extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(mytheme.darkbluishcolor),
+                            MaterialStateProperty.all(context.theme.focusColor),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "BUY".text.make())
+                    child: "Add to cart".text.make())
               ],
             )
           ],
         ))
       ],
-    )).white.roundedLg.square(150).make().py16();
+    )).color(context.theme.cardColor).roundedLg.square(150).make().py16();
   }
 }
 
@@ -140,7 +152,7 @@ class catelogimage extends StatelessWidget {
         .box
         .rounded
         .p8
-        .color(mytheme.creamcolor)
+        .color(context.canvasColor)
         .make()
         .p16()
         .w40(context);
