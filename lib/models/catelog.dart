@@ -1,13 +1,18 @@
 import 'package:flutter/cupertino.dart';
 
 class Catelogmodel {
+  static final catelogmodel = Catelogmodel.internal();
+
+  Catelogmodel.internal();
+
+  factory Catelogmodel() => catelogmodel;
+
   static List<Item> items = [];
 
   Item getbyid(int id) =>
       items.firstWhere((Element) => Element.id == id, orElse: null);
 
-      
- Item getbyposition(int pos) => items[pos];
+  Item getbyposition(int pos) => items[pos];
 }
 
 class Item {

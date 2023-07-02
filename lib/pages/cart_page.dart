@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/cart.dart';
+import 'package:flutter_application_1/models/catelog.dart';
 import 'package:flutter_application_1/widget/theme.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -22,8 +24,7 @@ class cartpage extends StatelessWidget {
 }
 
 class carttotal extends StatelessWidget {
-  const carttotal({super.key});
-
+  final cart = cartmodel();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -31,13 +32,12 @@ class carttotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$${999}".text.xl5.color(context.theme.hintColor).make(),
+          "\$${cart.totalprice}".text.xl5.color(context.theme.hintColor).make(),
           30.widthBox,
           ElevatedButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: "Buying not Supported yet.".text.make())
-                  );
+                  SnackBar(content: "Buying not Supported yet.".text.make()));
             },
             style: ButtonStyle(
               backgroundColor:
@@ -59,18 +59,26 @@ class cartlist extends StatefulWidget {
 }
 
 class _cartlistState extends State<cartlist> {
+  final cart = cartmodel();
+
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 5,
-      itemBuilder: (context, index) => ListTile(
-        leading: Icon(Icons.done),
-        trailing: IconButton(
-          icon: Icon(Icons.remove_circle_outline),
-          onPressed: () {},
-        ),
-        title: "Item 1".text.make(),
-      ),
-    );
+    return cart.items.isEmpty
+        ? "Nothing to Show".text.xl3.makeCentered()
+        : ListView.builder(
+            itemCount: cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+              leading: Icon(Icons.done),
+              trailing: IconButton(
+                icon: Icon(Icons.remove_circle_outline),
+                onPressed: () {
+                  cart.remove(cart.items[index]);
+                  
+                  setState(() {});
+                },
+              ),
+              title: cart.items[index].name.text.make(),
+            ),
+          );
   }
 }

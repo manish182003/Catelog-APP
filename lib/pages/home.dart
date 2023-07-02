@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/models/cart.dart';
 import 'dart:ui';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
@@ -10,6 +11,8 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_application_1/models/catelog.dart';
 import 'package:flutter_application_1/widget/drawer.dart';
 import 'package:flutter_application_1/widget/itemwidget.dart';
+
+import 'addtocart.dart';
 
 class homepage extends StatefulWidget {
   @override
@@ -24,7 +27,7 @@ class _homepageState extends State<homepage> {
   }
 
   loaddata() async {
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 2));
     final catelogjson =
         await rootBundle.loadString("assets/files/catelog.json");
     final decodedata = jsonDecode(catelogjson);
@@ -125,13 +128,7 @@ class Catelogitem extends StatelessWidget {
               buttonPadding: Vx.mOnly(right: 16),
               children: [
                 "\$${catelog.price}".text.bold.xl.make(),
-                ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(context.theme.focusColor),
-                        shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Add to cart".text.make())
+                addtocart(catelog: catelog)
               ],
             )
           ],

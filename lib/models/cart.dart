@@ -1,12 +1,18 @@
 import 'package:flutter_application_1/models/catelog.dart';
 
 class cartmodel {
-  //catelog field
-  Catelogmodel catelog;
-  cartmodel({
-    required this.catelog,
-  }):assert(catelog!=null);
 
+static final Cartmodel=cartmodel.internal();
+
+cartmodel.internal();
+
+factory cartmodel()=> Cartmodel;
+
+
+
+  //catelog field
+  Catelogmodel catelog=Catelogmodel();
+ 
 
 //collection of id
   final List<int> itemids = [];
